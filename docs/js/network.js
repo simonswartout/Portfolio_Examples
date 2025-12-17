@@ -14,7 +14,7 @@ export async function createNetworkLayer(appId, initialToken) {
             const callbacks = new Set();
 
             socket.on('connect', () => {
-                socket.emit('join', { roomId: window.__roomId || 'lobby' });
+                socket.emit('join', { roomId: window.__roomId || 'lobby', token: window.__socket_token || null });
             });
 
             socket.on('snapshot', (snap) => {

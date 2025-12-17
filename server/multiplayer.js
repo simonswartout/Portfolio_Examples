@@ -27,8 +27,16 @@ function makeRoom(id) {
 io.on('connection', (socket) => {
   console.log('socket connected', socket.id);
 
-  socket.on('join', ({ roomId, playerId } = {}) => {
+  socket.on('join', ({ roomId, token } = {}) => {
     const rId = roomId || 'lobby';
+    const EXPECTED = process.env.SOCKET_SECRET || 'dev-secret';
+    if (EXPECTED && token !== EXPECTED) {
+      socket.emit('auth_failed', { reason: 'invalid_token' });
+      socket.disconnect(true);
+      console.log(`socket ${socket.id} failed auth for room ${rId}`);
+      return;
+    }
+
     if (!rooms.has(rId)) rooms.set(rId, makeRoom(rId));
     const room = rooms.get(rId);
 
