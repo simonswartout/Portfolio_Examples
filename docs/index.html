@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Deadwood Drifter: Multiplayer (Modular)</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="core">
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="ui-layer">
+      <div style="display:flex; justify-content:space-between; width: 100%;">
+          <div class="hud-text" id="money-display">LOOT: $0</div>
+          <div id="status">CONNECTING TO SERVER...</div>
+          <div class="hud-text" id="weapon-display">WEAPON: RUSTY PISTOL</div>
+      </div>
+      <div id="interaction-prompt">PRESS 'E' TO ENTER</div>
+      <div id="health-container">
+          <div id="health-fill"></div>
+          <div id="health-label">HEALTH</div>
+      </div>
+      <div id="death-message">YOU DIED</div>
+  </div>
+
+  <div id="shop-overlay">
+      <div id="shop-title">SAFEHOUSE SUPPLIES</div>
+      <div id="shop-items"></div>
+      <button id="close-shop">EXIT SAFEHOUSE</button>
+  </div>
+
+  <div id="controls-hint">WASD to Move (Isometric) | Mouse to Aim/Shoot | E to Interact</div>
+
+  <!-- Socket.IO tunnel configuration (auto-added for local testing) -->
+  <script>
+    window.__use_socket = true;
+    window.__socket_server_url = 'https://little-suits-add.loca.lt';
+    window.__roomId = 'lobby';
+    window.__firebase_config = null; // e.g. { apiKey: '...', authDomain: '...' }
+    window.__initial_auth_token = null; // optional custom token
+    window.__app_id = 'deadwood-demo';
+  </script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
