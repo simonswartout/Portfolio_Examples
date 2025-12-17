@@ -1,0 +1,31 @@
+/* Copied and scoped from original inline styles (kept appearance) */
+body.core {
+    margin: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+}
+
+canvas { display:block; }
+
+#ui-layer { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; display:flex; flex-direction:column; justify-content:space-between; padding:20px; box-sizing:border-box; }
+.hud-text { font-size:24px; font-weight:bold; color:#d7ccc8; text-shadow:2px 2px 0px #3e2723; }
+#interaction-prompt { position:absolute; top:65%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.8); color:#ffb74d; padding:10px 20px; border:1px solid #ffb74d; display:none; font-size:18px; text-transform:uppercase; letter-spacing:2px; }
+#shop-overlay { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:450px; background:#212121; border:4px double #8d6e63; box-shadow:0 0 50px rgba(0,0,0,0.8); display:none; flex-direction:column; pointer-events:auto; color:#d7ccc8; padding:20px; text-align:center; }
+#shop-title { font-size:32px; margin-bottom:20px; color:#ffcc80; border-bottom:2px solid #8d6e63; padding-bottom:10px; font-family:'Times New Roman', Times, serif; }
+.shop-item { background:#3e2723; margin:10px 0; padding:15px; display:flex; justify-content:space-between; align-items:center; border:1px solid #5d4037; cursor:pointer; transition:all .2s; }
+.shop-item:hover { background:#4e342e; border-color:#ffcc80; }
+.shop-item.owned { background:#1b5e20; cursor:default; border-color:#4caf50; }
+.shop-item.cant-afford { opacity:.4 }
+#close-shop { margin-top:auto; padding:15px; background:#b71c1c; color:white; border:none; font-family:inherit; font-size:18px; cursor:pointer; text-transform:uppercase; letter-spacing:2px; }
+#close-shop:hover { background:#d32f2f }
+#controls-hint { position:absolute; bottom:20px; left:20px; color:#8d6e63; font-size:14px; opacity:.8; text-shadow:1px 1px 0 #000 }
+#status { position:absolute; top:20px; left:50%; transform:translateX(-50%); color:#4caf50; font-size:14px; text-shadow:1px 1px 0 #000 }
+#health-container { position:absolute; bottom:20px; right:20px; width:200px; height:24px; background:#212121; border:2px solid #5d4037; box-shadow:0 0 10px rgba(0,0,0,.5); }
+#health-fill { width:100%; height:100%; background:linear-gradient(90deg,#b71c1c,#e53935); transition:width .1s linear }
+#health-label { position:absolute; width:100%; text-align:center; top:2px; font-size:14px; font-weight:bold; color:#fff; text-shadow:1px 1px 1px #000 }
+#death-message { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:60px; color:#b71c1c; font-weight:bold; text-shadow:0 0 20px black; display:none; pointer-events:none; z-index:100 }
+
+/* small helper */
+.hidden { display:none !important }
