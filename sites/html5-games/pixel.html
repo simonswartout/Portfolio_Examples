@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pixel Royale</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrap">
+    <h1>Pixel Royale</h1>
+    <canvas id="pixel-canvas" width="600" height="300"></canvas>
+    <p class="hint">Use Arrow Keys to move. Press Space to reset.</p>
+    <p><a href="/html5-games">Back to games</a></p>
+  </div>
+
+  <script src="js/games/pixel.js"></script>
+  <script>
+    window.GM = window.GM || {};
+    window.startPixelRoyale && window.startPixelRoyale();
+  </script>
+</body>
+</html>

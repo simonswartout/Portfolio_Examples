@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV_PORTFOLIO.exe - Retro</title>
+    <!-- Pixel Font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="crt">
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <header>
+            <h1>ALEX_DEV</h1>
+            <div class="subtitle">Press Start to Continue</div>
+        </header>
+
+        <!-- STATS / HERO -->
+        <div class="stats-box">
+            <div class="stat-item">
+                <span class="stat-label">SKILL:</span>
+                <span class="stat-value">Full Stack Developer</span>
+            </div>
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <h2 class="section-title">> SELECT_MISSION</h2>
+        
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/111111/33ff00?text=NEON+RACER&font=roboto" alt="Neon Racer" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Neon Racer JS</h3>
+                    <p class="card-tech">Node.js | Socket.io | HTML5 Canvas</p>
+                    <button class="btn" onclick="openModal('modal1')">Play Demo</button>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/111111/ff00ff?text=DUNGEON+BOT&font=roboto" alt="Dungeon Bot" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Discord Dungeon</h3>
+                    <p class="card-tech">Node.js | Discord.js | MongoDB</p>
+                    <button class="btn" onclick="openModal('modal2')">Inspect</button>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/111111/00ffff?text=PIXEL+ROYALE&font=roboto" alt="Pixel Royale" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Pixel Royale</h3>
+                    <p class="card-tech">React | Node.js | WebRTC</p>
+                    <button class="btn" onclick="openModal('modal3')">Play Demo</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER / SOCIALS -->
+        <footer>
+            <h3>> CONNECT_PLAYER</h3>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github-square"></i></a>
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" class="social-icon" title="Email"><i class="fas fa-envelope-square"></i></a>
+            </div>
+            <p style="margin-top: 1rem; color: #555;">© 2024 INSERT COIN TO CONTINUE</p>
+        </footer>
+
+    </div>
+
+    <!-- MODALS (Hidden by default) -->
+    
+    <!-- Modal 1: Neon Racer -->
+    <div id="modal1" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Neon Racer JS</h2>
+                <button class="close-btn" onclick="closeModal(event, true)">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="game-canvas-container">
+                    <canvas id="neon-canvas" width="600" height="300"></canvas>
+                </div>
+                <div class="controls-hint">[LEFT/RIGHT ARROWS] to Dodge | Avoid Red Blocks</div>
+                
+                <p>A high-speed racing game built with vanilla JavaScript. The demo above runs a custom loop directly in the browser canvas.</p>
+                <div class="modal-tags">
+                    <span>#NodeJS</span>
+                    <span>#SocketIO</span>
+                    <span>#GameDev</span>
+                    <span>#Canvas</span>
+                </div>
+                <br>
+                <a href="#" class="btn" style="border-color: var(--accent-pink); color: var(--accent-pink);">View Source</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Dungeon Bot -->
+    <div id="modal2" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Discord Dungeon Bot</h2>
+                <button class="close-btn" onclick="closeModal(event, true)">X</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x300/111111/ff00ff?text=DISCORD+CMD+INTERFACE&font=roboto" style="width:100%; margin-bottom:1rem; border: 1px solid #333;" alt="Discord Bot">
+                <p>A fully featured RPG playable entirely within Discord chat. Features inventory management, combat systems, and party raiding mechanics.</p>
+                <div class="modal-tags">
+                    <span>#NodeJS</span>
+                    <span>#DiscordJS</span>
+                    <span>#MongoDB</span>
+                </div>
+                <br>
+                <a href="#" class="btn">Add to Server</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Pixel Royale -->
+    <div id="modal3" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Pixel Royale</h2>
+                <button class="close-btn" onclick="closeModal(event, true)">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="game-canvas-container">
+                    <canvas id="pixel-canvas" width="600" height="300"></canvas>
+                </div>
+                <div class="controls-hint">[ARROWS] Move & Jump | [SPACE] Reset | Physics Demo</div>
+
+                <p>A 2D platformer engine. The demo above showcases simple AABB collision detection and gravity simulation written in pure JS.</p>
+                <div class="modal-tags">
+                    <span>#WebRTC</span>
+                    <span>#Multiplayer</span>
+                    <span>#React</span>
+                </div>
+                <br>
+                <a href="#" class="btn">View Source</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/games/neon.js"></script>
+    <script src="js/games/pixel.js"></script>
+</body>
+</html>

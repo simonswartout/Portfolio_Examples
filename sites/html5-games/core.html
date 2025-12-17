@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Neon Core Defense</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Canvas will be created by the game script if needed; keep same container structure -->
+  <div id="game-root">
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="ui-layer">
+      <div id="top-bar">
+        <div id="score-display">SCORE: 0</div>
+        <div id="weapon-display">SYSTEM: NORMAL</div>
+      </div>
+      <div id="health-bar-container">
+        <div id="health-fill"></div>
+      </div>
+      <div id="fps-display">FPS: 60</div>
+      <div id="stats">POOLS ACTIVE</div>
+    </div>
+
+    <div id="menu-overlay">
+      <h1 id="game-title">NEON CORE V2.4</h1>
+      <p>HIGH PERFORMANCE BUILD<br>Removed ShadowBlur | Fake Glow | Squared Dist Collisions</p>
+      <button id="start-btn">Initialize System</button>
+      <p id="final-score" class="hidden" style="margin-top: 20px; color: #f0f;">SCORE: 0</p>
+    </div>
+  </div>
+
+  <script src="js/core.js"></script>
+</body>
+</html>

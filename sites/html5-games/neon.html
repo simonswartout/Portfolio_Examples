@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Neon Racer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrap">
+    <h1>Neon Racer</h1>
+    <canvas id="neon-canvas" width="600" height="300"></canvas>
+    <p class="hint">Use Arrow Left / Arrow Right to move</p>
+    <p><a href="/html5-games">Back to games</a></p>
+  </div>
+
+  <script src="js/games/neon.js"></script>
+  <script>
+    window.GM = window.GM || {};
+    window.startNeonRacer && window.startNeonRacer();
+  </script>
+</body>
+</html>

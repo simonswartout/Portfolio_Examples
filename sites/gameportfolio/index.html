@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AUTUMN_DELIVERY | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Three.js CDN kept in-page for simplicity -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <div id="loader">PAVING ROADS...</div>
+
+  <div id="ui-layer">
+    <div id="header">
+      <h1>AUTUMN DELIVERY</h1>
+      <div class="subtitle">RUN AROUND • FIND PACKAGES • DELIVER TO NEIGHBORS</div>
+    </div>
+    
+    <div id="task-log">
+      <div class="task-item active" id="status-text">STATUS: LOOKING FOR PACKAGES</div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 20px; color: rgba(255,255,255,0.7);">
+      [WASD / ARROWS] to Run
+    </div>
+  </div>
+
+  <div id="bubble" class="speech-bubble">Hello!</div>
+
+  <div id="modal">
+    <h2 id="modal-title">INFO FOUND!</h2>
+    <div class="badge">SECRET UNLOCKED</div>
+    <div id="modal-content"></div>
+    <a href="#" class="btn" id="modal-close">KEEP DELIVERING</a>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-examples-modular",
+  "version": "1.0.0",
+  "description": "Modularized retro portfolio site with two canvas game demos",
+  "main": "server.js",
+  "scripts": {
+    "start": "bash ./scripts/start-3000.sh",
+    "start:stone": "DEFAULT_SITE=stone-realestate bash ./scripts/start-3000.sh",
+    "dev": "nodemon server.js",
+    "start:game-server": "node server/multiplayer.js",
+    "test": "node -e \"console.log('no tests configured')\""
+  },
+  "author": "simonswartout",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
